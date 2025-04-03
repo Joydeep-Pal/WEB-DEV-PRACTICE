@@ -52,6 +52,10 @@
 document.addEventListener("keydown",function (){
     var key = event.key;
     
+    key_class="."+key;
+
+    document.querySelector("key_class").style;
+
     switch(key){
         case "w":
             var audio=new Audio("./sounds/tom-1.mp3");
@@ -92,4 +96,5 @@ document.addEventListener("keydown",function (){
             break;
     
     }
-})
+});
+
