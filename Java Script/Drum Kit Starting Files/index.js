@@ -104,4 +104,4 @@ function buttonAnimation (key){
         document.querySelector(keyClass).classList.remove("pressed");
     },100);
 
-}
+} 
