@@ -3,6 +3,7 @@
     document.querySelectorAll(".drum")[i].addEventListener("click",function () {
         
         var buttonInnerHtml=this.innerHTML;
+        buttonAnimation(buttonInnerHtml);
         
         switch(buttonInnerHtml){
             case "w":
@@ -51,10 +52,8 @@
 
 document.addEventListener("keydown",function (){
     var key = event.key;
-    
-    key_class="."+key;
 
-    document.querySelector("key_class").style;
+    buttonAnimation(key);
 
     switch(key){
         case "w":
@@ -98,3 +97,11 @@ document.addEventListener("keydown",function (){
     }
 });
 
+function buttonAnimation (key){
+    keyClass="."+key;
+    document.querySelector(keyClass).classList.add("pressed");
+    setTimeout(function(){
+        document.querySelector(keyClass).classList.remove("pressed");
+    },100);
+
+}
